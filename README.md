@@ -1,7 +1,7 @@
 About caproto
 =============
 
-Home: http://github.com/nsls-ii/caproto
+Home: http://github.com/caproto/caproto
 
 Package license: BSD-3-Clause
 
@@ -117,4 +117,5 @@ Feedstock Maintainers
 =====================
 
 * [@CJ-Wright](https://github.com/CJ-Wright/)
+* [@conda-forge/event-model](https://github.com/conda-forge/event-model/)
 
