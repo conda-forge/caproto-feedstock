@@ -18,7 +18,7 @@ build:
     - caproto-repeater = caproto.commandline.repeater:main
     - caproto-defaultdict-server = caproto.ioc_examples.defaultdict_server:main
     - caproto-spoof-beamline = caproto.ioc_examples.spoof_beamline:main
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
