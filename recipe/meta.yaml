@@ -1,8 +1,3 @@
-# Note: there are many handy hints in comments in this example -- remove them when you've finalized your recipe
-
-# Jinja variables help maintain the recipe as you'll update the version only here.
-# Using the name variable with the URL in line 13 is conviniet
-# when copying and pasting from another recipe, but not really needed.
 {% set name = "caproto" %}
 {% set version = "0.4.0" %}
 
@@ -11,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/nsls-ii/{{ name }}/archive/v{{ version }}.tar.gz
+  url: https://github.com/{{ name }}/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: 283fca4c9bedf01cc26437a531b2875ae3414f0735f26030e2c9bff6922fc183
 
 build:
@@ -43,7 +38,7 @@ test:
     - caproto
 
 about:
-  home: http://github.com/nsls-ii/caproto
+  home: http://github.com/caproto/caproto
   license: BSD-3-Clause
   license_family: BSD
   license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
@@ -52,3 +47,4 @@ about:
 extra:
   recipe-maintainers:
     - CJ-Wright
+    - mrakitin
