@@ -4,7 +4,7 @@
 # Using the name variable with the URL in line 13 is conviniet
 # when copying and pasting from another recipe, but not really needed.
 {% set name = "caproto" %}
-{% set version = "0.4.3" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://github.com/nsls-ii/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 87737f3e3a3edfb08b032e9b46373167be7eb12f816314f7b3ca9d70cd889523
+  sha256: 5d8a7fb63542da328d78fa1472283068a1576daba92d80d67877b910a9b1e4f7
 
 build:
   noarch: python
@@ -24,7 +24,7 @@ build:
     - caproto-defaultdict-server = caproto.ioc_examples.defaultdict_server:main
     - caproto-spoof-beamline = caproto.ioc_examples.spoof_beamline:main
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -46,8 +46,8 @@ about:
   home: http://github.com/nsls-ii/caproto
   license: BSD-3-Clause
   license_family: BSD
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
-  summary: 'a bring-your-own-IO implementation of the EPICS Channel Access protocol in pure Python'
+  license_file: {{ environ["RECIPE_DIR"] }}/LICENSE
+  summary: a bring-your-own-IO implementation of the EPICS Channel Access protocol in pure Python
 
 extra:
   recipe-maintainers:
