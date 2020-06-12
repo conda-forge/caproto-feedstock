@@ -4,7 +4,7 @@
 # Using the name variable with the URL in line 13 is conviniet
 # when copying and pasting from another recipe, but not really needed.
 {% set name = "caproto" %}
-{% set version = "0.5.0" %}
+{% set version = "0.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://github.com/nsls-ii/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 5d8a7fb63542da328d78fa1472283068a1576daba92d80d67877b910a9b1e4f7
+  sha256: 5f986194725536e20fc78a076d23a6c51277a660585e4b340d355181b8578dfb
 
 build:
   noarch: python
