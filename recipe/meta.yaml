@@ -4,7 +4,7 @@
 # Using the name variable with the URL in line 13 is conviniet
 # when copying and pasting from another recipe, but not really needed.
 {% set name = "caproto" %}
-{% set version = "0.5.1" %}
+{% set version = "0.5.2" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9e3cd7dc76ab033fc349d389d7b23abf8d8200ee08c5451298e387005ace32e8
+  sha256: cd1032a774d2855c236d881404fc92a0196bbc9f2f9f388aa14be1ba4f8453e5
 
 build:
   noarch: python
