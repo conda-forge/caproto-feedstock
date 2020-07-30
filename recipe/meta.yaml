@@ -11,8 +11,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/nsls-ii/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 5f986194725536e20fc78a076d23a6c51277a660585e4b340d355181b8578dfb
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 9e3cd7dc76ab033fc349d389d7b23abf8d8200ee08c5451298e387005ace32e8
 
 build:
   noarch: python
@@ -23,7 +23,7 @@ build:
     - caproto-repeater = caproto.commandline.repeater:main
     - caproto-defaultdict-server = caproto.ioc_examples.defaultdict_server:main
     - caproto-spoof-beamline = caproto.ioc_examples.spoof_beamline:main
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -43,7 +43,7 @@ test:
     - caproto
 
 about:
-  home: http://github.com/nsls-ii/caproto
+  home: http://github.com/caproto/caproto
   license: BSD-3-Clause
   license_family: BSD
   license_file: {{ environ["RECIPE_DIR"] }}/LICENSE
@@ -53,3 +53,5 @@ extra:
   recipe-maintainers:
     - conda-forge/event-model
     - danielballan
+    - klauer
+    - tacaswell
