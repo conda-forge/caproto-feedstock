@@ -31,7 +31,7 @@ requirements:
     - numpy
     - trio >=0.12.1
     - curio >=1.2
-    - asks
+    - dpkt
 
 test:
   imports:
