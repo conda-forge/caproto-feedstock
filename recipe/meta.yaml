@@ -29,8 +29,8 @@ requirements:
     - python >=3.6
     - netifaces
     - numpy
-    - trio
-    - curio
+    - trio >=0.12.1
+    - curio >=1.2
     - asks
 
 test:
