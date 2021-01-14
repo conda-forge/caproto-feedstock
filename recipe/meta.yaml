@@ -1,5 +1,5 @@
 {% set name = "caproto" %}
-{% set version = "0.7.0" %}
+{% set version = "0.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 19895ba202d4dc3cc2a26d93bb14d13aac6fac0f952a5cb15d77e9bdab1ee438
+  sha256: 23243ee524b94ca48af31257a5f9b9d6c913604a76f54fa0bfbfc1555c6a12d7
 
 build:
   noarch: python
@@ -16,8 +16,8 @@ build:
     - caproto-put = caproto.commandline.put:main
     - caproto-monitor = caproto.commandline.monitor:main
     - caproto-repeater = caproto.commandline.repeater:main
-    - caproto-defaultdict-server = caproto.ioc_examples.defaultdict_server:main
-    - caproto-spoof-beamline = caproto.ioc_examples.spoof_beamline:main
+    - caproto-defaultdict-server = caproto.ioc_examples.pathological.defaultdict_server:main
+    - caproto-spoof-beamline = caproto.ioc_examples.pathological.spoof_beamline:main
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
