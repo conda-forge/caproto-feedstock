@@ -1,11 +1,11 @@
-About caproto
-=============
+About caproto-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/caproto-feedstock/blob/main/LICENSE.txt)
 
 Home: http://github.com/caproto/caproto
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/caproto-feedstock/blob/main/LICENSE.txt)
 
 Summary: a bring-your-own-IO implementation of the EPICS Channel Access protocol in pure Python
 
