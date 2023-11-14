@@ -1,5 +1,5 @@
 {% set name = "caproto" %}
-{% set version = "1.1.0" %}
+{% set version = "1.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7033a8c60387688f14e556f18697137f2479537a36b224f7c1db8b73974cecd2
+  sha256: 82a70744804f2adcdbd0e40e69c910f88a84c3917dacb9a217a1425c4ebe7de2
 
 build:
   noarch: python
