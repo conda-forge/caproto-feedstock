@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 82a70744804f2adcdbd0e40e69c910f88a84c3917dacb9a217a1425c4ebe7de2
 
 build:
@@ -18,15 +18,15 @@ build:
     - caproto-repeater = caproto.commandline.repeater:main
     - caproto-defaultdict-server = caproto.ioc_examples.pathological.defaultdict_server:main
     - caproto-spoof-beamline = caproto.ioc_examples.pathological.spoof_beamline:main
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - netifaces
     - numpy
     - trio >=0.18.0
@@ -34,6 +34,8 @@ requirements:
     - dpkt
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - caproto
 
