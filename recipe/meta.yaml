@@ -30,9 +30,10 @@ requirements:
     - python >={{ python_min }}
     - netifaces
     - numpy
+    - dpkt
+  run_constrained:
     - trio >=0.18.0
     - curio >=1.2
-    - dpkt
 
 test:
   requires:
